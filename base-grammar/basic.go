@@ -57,7 +57,7 @@ func triangle(){
 
 
 func consts(){
-	const filename = "abc.txt"
+	const filename = "demo.txt"
 	const a, b = 3, 4
 	var c int
 	c = int(math.Sqrt(a*a + b*b))
