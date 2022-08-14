@@ -1,3 +1,3 @@
-module github/sswtk/go-practice-codehub
+module go-practice-codehub
 
 go 1.19
