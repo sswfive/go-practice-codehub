@@ -20,16 +20,6 @@ func (node *Node) SetValue(value int) {
 	node.Value = value
 }
 
-// 遍历树
-func (node *Node) Traverse() {
-	if node == nil {
-		return
-	}
-	node.Left.Traverse()
-	node.Print()
-	node.Right.Traverse()
-}
-
 // 工厂函数
 func CreateNode(value int) *Node {
 	return &Node{Value: value}

@@ -1,6 +1,9 @@
 package main
 
-import "go-practice-codehub/tree"
+import (
+	"fmt"
+	"go-practice-codehub/tree"
+)
 
 func main() {
 	var root tree.Node
@@ -13,5 +16,11 @@ func main() {
 	root.Right.Left.SetValue(4)
 
 	root.Traverse()
+
+	nodeCount := 0
+	root.TraverseFunc(func(node *tree.Node) {
+		nodeCount++
+	})
+	fmt.Println("Node count: ", nodeCount)
 
 }
