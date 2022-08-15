@@ -3,17 +3,18 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"go-practice-codehub/functional/fib"
 	"io"
 	"strings"
 )
 
-func fibonacci() func() int {
-	a, b := 0, 1
-	return func() int {
-		a, b = b, a+b
-		return a
-	}
-}
+//func fibonacci() func() int {
+//	a, b := 0, 1
+//	return func() int {
+//		a, b = b, a+b
+//		return a
+//	}
+//}
 
 // 改良版
 func fibonacci1() intGen {
@@ -48,13 +49,14 @@ func printFileContents(reader io.Reader) {
 }
 
 func main() {
-	f := fibonacci()
-	fs := fibonacci1()
-	fmt.Println(f()) // 1
+	//f := fib.Fibonacci()
+	//fs := fibonacci1()
+	//fmt.Println(f()) // 1
 	//fmt.Println(f()) // 1
 	//fmt.Println(f()) // 2
 	//fmt.Println(f()) // 3
 	//fmt.Println(f()) // 5
 	//fmt.Println(f()) // 8
+	var fs intGen = fib.Fibonacci()
 	printFileContents(fs)
 }
